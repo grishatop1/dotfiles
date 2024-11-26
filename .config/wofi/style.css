@@ -1,0 +1,19 @@
+@define-color accent #FFA3FD;
+@define-color secondary #865DFF;
+@define-color bg #191825;
+@define-color white #ffffff;
+@define-color off #804f7e;
+
+#text {
+	margin-left: 5px;
+}
+
+#entry {
+	border-radius: 0;
+}
+
+#entry:selected {
+	color: @white;
+	background-color: @secondary;
+	font-weight: bold;
+}

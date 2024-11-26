@@ -1,0 +1,56 @@
+@define-color accent #FFA3FD;
+@define-color secondary #865DFF;
+@define-color bg #191825;
+@define-color white #ffffff;
+@define-color off #804f7e;
+
+* {
+	font-family: Quicksand;
+	font-size: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+window#waybar {
+	background-color: @bg;
+}
+
+#window {
+	color: @secondary;
+	font-weight: bold;
+}
+
+#workspaces button {
+	padding: 0px 6px;
+	font-weight: bold;
+}
+
+#workspaces button.active {
+	color: @secondary;
+	box-shadow: inset 0px -2px @secondary;
+}
+
+#clock {
+	background-color: @accent;
+	color: @bg;
+	padding: 0px 4px;
+	border-radius: 8px;
+}
+
+#network {
+	box-shadow: inset 0px -1px @accent;
+}
+
+#network.disconnected {
+	color: @off;
+	box-shadow: inset 0px -1px @off;
+}
+
+#pulseaudio.muted {
+	color: @off;
+}
+
+.module {
+	margin: 4px 10px;
+	color: @accent;
+}
