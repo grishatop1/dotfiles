@@ -18,6 +18,7 @@ window#waybar {
 #window {
 	color: @secondary;
 	font-weight: bold;
+	margin-right: 200px;
 }
 
 #workspaces button {
@@ -46,7 +47,11 @@ window#waybar {
 	box-shadow: inset 0px -1px @off;
 }
 
-#pulseaudio.muted {
+#pulseaudio.output.muted {
+	color: @off;
+}
+
+#pulseaudio.input.source-muted {
 	color: @off;
 }
 

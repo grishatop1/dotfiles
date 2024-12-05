@@ -2,19 +2,30 @@
 	"layer": "top",
 	"modules-left": ["cpu", "memory", "disk", "hyprland/language", "tray", "hyprland/workspaces"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["network", "pulseaudio","clock"],
-	"pulseaudio": {
+	"modules-right": ["network", "pulseaudio#output", "pulseaudio#input", "clock"],
+	"pulseaudio#output": {
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon}  {volume}%",
 		"format-muted": " muted",
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-middle": "pavucontrol",
+		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 		"format-icons": {
 			"default": ["", "", ""],
 			"headphone": " ",
 			"headset": ""
 		},
+	},
+	"pulseaudio#input": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{format_source}",
+		"format-source": " on",
+		"format-source-muted": "  off",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-middle": "pavucontrol",
+		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 	},
 	"hyprland/workspaces": {
         "format": "{icon}",
@@ -23,21 +34,18 @@
     },
     "hyprland/window": {
         "format": "{}",
-        "max-length": 65,
+        "max-length": 50,
     },
 	"network": {
 		"tooltip": false,
 		"format-wifi": "   {ipaddr}     {bandwidthDownBytes}  󰣶  {signalStrength}%",
+		"format-ethernet": "   {ipaddr}     {bandwidthDownBytes}",
 		"format-disconnected": "disconnected",
-		"on-click": "iwgtk",
 		"interval": 2,
 	},
 	"hyprland/language": {
 		"format": " {}",
-		"format-en": "usa",
-		"format-ru": "rus",
-		"format-sr": "srb",
-		"format-rs": "srb"
+		"keyboard-name": "juchen-usb-keyboard"
 	},
 	"tray":{
 		"icon-size":18,
@@ -48,7 +56,6 @@
         "tooltip": false,
     },
     "cpu": {
-        "interval": 5,
         "format": "  {}%"
     },
     "memory": {
