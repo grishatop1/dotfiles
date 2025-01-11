@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["cpu", "memory", "disk", "hyprland/language", "tray", "hyprland/workspaces"],
+	"modules-left": ["memory", "disk", "hyprland/language", "tray", "hyprland/workspaces"],
 	"modules-center": ["hyprland/window"],
 	"modules-right": ["network", "pulseaudio#output", "pulseaudio#input", "clock"],
 	"pulseaudio#output": {
@@ -28,7 +28,7 @@
 		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 	},
 	"hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{icon}", 
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
     },
@@ -60,8 +60,8 @@
     },
     "memory": {
         "interval": 4,
-        "format": "   {}%",
-        "max-length": 10
+        "format": "  {used}GB used",
+        "max-length": 50
     },
 	"disk": {
 		"interval": 5,
