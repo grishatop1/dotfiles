@@ -1,0 +1,18 @@
+[
+  {
+    "bindings": {
+      "ctrl-alt-o": "workspace::Open"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-p": "command_palette::Toggle",
+      "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {}
+  }
+]
