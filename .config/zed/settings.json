@@ -5,22 +5,14 @@
 //
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
-// command palette
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "icon_theme": "Catppuccin Frappé",
-    "show_edit_predictions": false,
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
-    },
-    "base_keymap": "VSCode",
-    "ui_font_size": 16,
-    "buffer_font_size": 17.0,
-    "buffer_font_family": "JetBrains Mono NL",
-    "theme": {
-        "mode": "dark",
-        "light": "Gruvbox Light",
-        "dark": "Ayu Dark"
-    },
-    "tab_size": 4
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrains Mono NL",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  }
 }
