@@ -31,6 +31,12 @@ window#waybar {
 	box-shadow: inset 0px -2px @secondary;
 }
 
+#custom-vpn {
+	margin-left: 2px;
+	margin-right: 4px;
+	box-shadow: inset 0px -1px @accent;
+}
+
 #clock {
 	background-color: @accent;
 	color: @bg;
