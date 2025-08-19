@@ -2,7 +2,8 @@
   {
     "bindings": {
       "ctrl-o": "file_finder::Toggle",
-      "ctrl-p": "command_palette::Toggle"
+      "ctrl-p": "command_palette::Toggle",
+      "ctrl-shift-j": "workspace::NewTerminal"
     }
   }
 ]

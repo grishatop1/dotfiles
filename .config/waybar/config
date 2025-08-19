@@ -2,7 +2,12 @@
 	"layer": "top",
 	"modules-left": ["cpu", "memory", "battery", "hyprland/language", "tray", "hyprland/workspaces"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["network", "pulseaudio#output", "backlight", "clock"],
+	"modules-right": ["network", "pulseaudio#output", "backlight", "clock"],	
+	"custom/vpn": {
+		"interval": 3,
+		"format": "{}",
+		"exec": "ip add show | grep -qF tun0 && echo VPN",
+	},
 	"battery": {
 		"format": "󱈑 {capacity}%",
 		"format-discharging": "󱈑 {capacity}%",
@@ -11,7 +16,8 @@
 	"backlight": {
 		"device": "intel_backlight",
 		"format": " {percent}%",
-		"scroll-step": 10
+		"scroll-step": 5,
+		"smooth-scrolling-threshold": 0.9
 	},
 	"pulseaudio#output": {
 		"tooltip": false,
@@ -26,6 +32,7 @@
 			"headphone": " ",
 			"headset": ""
 		},
+		"smooth-scrolling-threshold": 0.9,
 	},
 	"pulseaudio#input": {
 		"tooltip": false,
@@ -49,9 +56,9 @@
 	"network": {
 		"tooltip": false,
 		"format-wifi": "  {ipaddr}",
-		"format-ethernet": "   {ipaddr}     {bandwidthDownBytes}",
+		"format-ethernet": "  {ipaddr}",
 		"format-disconnected": "disconnected",
-		"interval": 2,
+		"interval": 3,
 	},
 	"hyprland/language": {
 		"format": " {short}",
@@ -69,7 +76,7 @@
     },
     "memory": {
         "interval": 4,
-        "format": " {used}GB",
+        "format": ": {used}GB",
         "max-length": 50
     },
 	"disk": {

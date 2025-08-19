@@ -4,3 +4,4 @@ text-color=#FFA3FD
 border-radius=4
 border-color=#865DFF
 padding=8
+default-timeout=8000
