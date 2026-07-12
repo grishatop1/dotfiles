@@ -45,8 +45,8 @@ input "type:pointer" {
     pointer_accel -0.88
 }
 
-bindsym Print exec sh -c 'img=$(slurp) && grim -g "$img" - > /tmp/ss.png && wl-copy < /tmp/ss.png && mv /tmp/ss.png ~/Pictures/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png'
-bindsym Shift+Print exec sh -c 'grim - > /tmp/ss.png && wl-copy < /tmp/ss.png && mv /tmp/ss.png ~/Pictures/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png'
+bindsym Print exec sh -c 'img=$(slurp) && grim -c -g "$img" - > /tmp/ss.png && wl-copy < /tmp/ss.png && mv /tmp/ss.png ~/Pictures/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png'
+bindsym Shift+Print exec sh -c 'grim -c - > /tmp/ss.png && wl-copy < /tmp/ss.png && mv /tmp/ss.png ~/Pictures/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png'
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-

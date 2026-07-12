@@ -3,6 +3,7 @@
     "position": "bottom",
     "spacing": 0,
     "margin-top": 0,
+    "margin-bottom": -1,
 
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
@@ -73,7 +74,7 @@
         "smooth-scrolling-threshold": 2.0
     },
     "clock": {
-        "format": "{:%A %d %B  %H:%M}",
+        "format": "{:%A %d %B %H:%M}",
         "interval": 5,
         "tooltip-format": "{:%Y-%m-%d}"
     }
