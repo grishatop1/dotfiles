@@ -1,0 +1,79 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 0,
+    "margin-top": 0,
+
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["network", "cpu", "memory", "disk", "backlight", "pulseaudio", "clock", "tray"],
+    
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+    "sway/window": {
+        "max-length": 50,
+        "format": "{title}"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "network": {
+        "format-wifi": "{icon} {ipaddr}",
+        "format-disconnected": "network down",
+        "tooltip-format-wifi": "SSID: {essid}",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
+    },
+
+    "cpu": {
+        "format": "{icon} {usage}%",
+        "interval": 2,
+        "format-icons": ["\udb83\udf86", "\udb83\udf85", "\udb81\udcc5"],
+        "states": {
+            "critical": 75
+        }
+    },
+
+    "memory": {
+        "format": "{icon} {percentage}%",
+        "interval": 2,
+        "format-icons": "\udb80\udf5b"
+    },
+
+    "disk": {
+        "path": "/",
+        "format": "\udb80\udeca {free}",
+        "interval": 10
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "scroll-step": 5.0,
+        "smooth-scrolling-threshold": 2.0,
+        "min-brightness": 5.1,
+        "format-icons": ["\udb86\ude4f", "\udb86\ude51", "\udb86\ude53", "\udb86\ude55", "\udb81\udee8"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} {volume}%",
+        "format-icons": {
+            "default": "\uf027",
+            "default-muted": "\ueee8",
+            "headphone": "\uf025",
+            "headphone-muted": "\ueee8"
+        }, 
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5.0,
+        "smooth-scrolling-threshold": 2.0
+    },
+    "clock": {
+        "format": "{:%A %d %B  %H:%M}",
+        "interval": 5,
+        "tooltip-format": "{:%Y-%m-%d}"
+    }
+}
