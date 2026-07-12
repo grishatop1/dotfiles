@@ -60,6 +60,7 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
+        "format-bluetooth": "\uf293 {volume}%",
         "format-muted": "{icon} {volume}%",
         "format-icons": {
             "default": "\uf027",
