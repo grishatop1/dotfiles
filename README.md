@@ -23,3 +23,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles checkout   # restores all tracked files to their original paths
 dotfiles config --local status.showUntrackedFiles no
 ```
+
+### tips
+
+don't `dotfiles add .` - it will add EVERYTHING
+instead do `dotfiles add -u` - it will stage only tracked files
