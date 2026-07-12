@@ -3,7 +3,7 @@
 
 ### creation
 
-```
+```bash
 # 1. Init a bare repo
 git init --bare ~/.dotfiles
 
