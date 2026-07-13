@@ -42,7 +42,7 @@
     "memory": {
         "format": "{icon} {percentage}%",
         "interval": 2,
-        "format-icons": "\udb80\udf5b"
+        "format-icons": "\uefc5"
     },
 
     "disk": {
