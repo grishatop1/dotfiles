@@ -42,14 +42,17 @@
         "interval": 2,
         "format-icons": ["\udb83\udf86", "\udb83\udf85", "\udb81\udcc5"],
         "states": {
-            "critical": 75
+            "critical": 70
         }
     },
 
     "memory": {
         "format": "{icon} {percentage}%",
         "interval": 2,
-        "format-icons": "\uefc5"
+        "format-icons": "\uefc5",
+        "states": {
+            "critical": 70
+        }
     },
 
     "disk": {
@@ -62,8 +65,9 @@
         "format": "{icon} {percent}%",
         "scroll-step": 5.0,
         "smooth-scrolling-threshold": 2.0,
-        "min-brightness": 5.1,
-        "format-icons": ["\udb86\ude4f", "\udb86\ude51", "\udb86\ude53", "\udb86\ude55", "\udb81\udee8"]
+        "min-brightness": 5.0,
+        "format-icons": "\uf522"
+        //"format-icons": ["\udb86\ude4f", "\udb86\ude51", "\udb86\ude53", "\udb86\ude55", "\udb81\udee8"]
     },
 
     "pulseaudio": {

@@ -59,7 +59,9 @@ window#waybar {
     color: @muted;
 }
 
-#cpu.critical {
+#cpu.critical,
+#memory.critical
+{
     color: @error; 
 }
 
