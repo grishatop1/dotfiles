@@ -63,6 +63,7 @@ exec wlsunset -l 43.814200 -L 18.569600 -t 2300   # replace with your coords; or
 exec udiskie
 exec /usr/bin/lxqt-policykit-agent
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 exec mako
 exec swayidle -w timeout 150 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec wl-paste --watch cliphist store   # clipboard history
