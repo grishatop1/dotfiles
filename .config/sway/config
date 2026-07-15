@@ -59,7 +59,7 @@ for_window [class=".*"] inhibit_idle focus
 
 
 # --- autostart -----------------------------------------------------
-exec wlsunset -l 43.814200 -L 18.569600 -t 2700   # replace with your coords; or use gammastep -l <lat>:<lon>
+exec wlsunset -l 43.814200 -L 18.569600 -t 2300   # replace with your coords; or use gammastep -l <lat>:<lon>
 exec udiskie
 exec /usr/bin/lxqt-policykit-agent
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'

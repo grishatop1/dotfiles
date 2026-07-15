@@ -26,8 +26,8 @@
     "network": {
         "format-wifi": "{icon} {ipaddr}",
         "format-disconnected": "network down",
-        "tooltip-format-wifi": "SSID: {essid}",
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
+        "tooltip-format-wifi": "ssid: {essid}\nstrength: {signalStrength}",
+        "format-icons": ["\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
     },
     
     "temperature": {
