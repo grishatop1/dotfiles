@@ -3,6 +3,13 @@
     "bindings": {
       "ctrl-o": "file_finder::Toggle",
       "ctrl-p": "command_palette::Toggle",
-    }
-  }
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-w": "pane::CloseActiveItem",
+    },
+  },
 ]
