@@ -68,6 +68,7 @@ exec mako
 exec swayidle -w timeout 150 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec wl-paste --watch cliphist store   # clipboard history
 exec wl-clip-persist --clipboard regular
+exec paplay ~/.config/sway/startup.wav
 
 # --------
 bindsym $mod+n exec makoctl dismiss
