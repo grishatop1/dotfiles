@@ -1,0 +1,28 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias z='zed . && exit'
+alias vim='nvim'
+alias dotfiles='/usr/bin/git --git-dir=/home/grisha/.dotfiles/ --work-tree=/home/grisha'
+alias nas='ssh grisha@192.168.1.42'
+alias cal='cal -m'
+
+PS1='[\u@\h \W]\$ '
+export PATH=$HOME/.local/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/grisha/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+. "$HOME/.cargo/env"
+export TERM="xterm-256color"
+
