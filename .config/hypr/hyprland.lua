@@ -107,10 +107,6 @@ hl.config({
             render_power = 3,
             color        = 0xee1a1a1a,
         },
-        
-        wobble = {
-            enabled = false,
-        },
 
         blur = {
             enabled   = false,
@@ -238,10 +234,10 @@ hl.gesture({
 
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
-hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
+-- hl.device({
+--     name        = "epic-mouse-v1",
+--     sensitivity = -0.5,
+-- })
 
 
 ---------------------
@@ -292,6 +288,17 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K",    hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J",  hl.dsp.window.move({ direction = "down" }))
 
+-- resize submap
+hl.bind(mainMod .. " + R", hl.dsp.submap("resize"))
+hl.define_submap("resize", function()
+    hl.bind("L", hl.dsp.window.resize({ x = 10, y = 0, relative = true}), { repeating = true })
+    hl.bind("H", hl.dsp.window.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind("K", hl.dsp.window.resize({ x = 0, y = 10, relative = true}), { repeating = true })
+    hl.bind("r", hl.dsp.window.resize({ x = 0, y = -10, relative = true}), { repeating = true })
+    hl.bind("escape", hl.dsp.submap("reset"))
+end)
+
+-- Keybinds further down will be global again...
 
 -- Switch workspaces with mainMod + [0-9]
 --
