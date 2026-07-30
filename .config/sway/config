@@ -51,7 +51,7 @@ bindsym Shift+Print exec sh -c 'grim -c - > /tmp/ss.png && wl-copy < /tmp/ss.png
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
-bindsym $mod+comma exec rofimoji --selector fuzzel --skin-tone neutral --prompt "> " --typer ydotool
+bindsym $mod+comma exec rofimoji --selector fuzzel --skin-tone neutral --prompt "> " --typer ydotool --action copy
 
 # Don't lock/blank while watching fullscreen video (mpv, browser fullscreen, etc)
 for_window [app_id="mpv"] inhibit_idle fullscreen
@@ -68,7 +68,7 @@ exec mako
 exec swayidle -w timeout 150 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec wl-paste --watch cliphist store   # clipboard history
 exec wl-clip-persist --clipboard regular
-exec paplay ~/.config/sway/startup.wav
+# exec paplay ~/.config/sway/startup.wav
 
 # --------
 bindsym $mod+n exec makoctl dismiss
