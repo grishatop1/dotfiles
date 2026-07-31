@@ -48,6 +48,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("wl-paste --watch cliphist store")
     hl.exec_cmd("wl-clip-persist --clipboard regular")
     hl.exec_cmd("hypridle")
+    hl.exec_cmd("~/.config/hypr/xdgstart.sh")
 end)
 
 
@@ -102,7 +103,7 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled      = true,
+            enabled      = false,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
@@ -115,7 +116,6 @@ hl.config({
             vibrancy  = 0.1696,
         },
     },
-
     animations = {
         enabled = true,
     },
