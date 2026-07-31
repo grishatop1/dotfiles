@@ -12,9 +12,9 @@ exec_always hash dbus-update-activation-environment 2>/dev/null && \
 
 # --- grisha ------------------------------------------
 
-output * allow_tearing on
-for_window [app_id="bombsquad"] allow_tearing yes
-for_window [app_id="org.vinegarhq.Sober"] allow_tearing yes
+
+output eDP-1 allow_tearing yes
+output * max_render_time off
 
 assign [app_id="brave-browser"] 3
 assign [app_id="org.telegram.desktop.*"] 4
@@ -34,6 +34,7 @@ focus_follows_mouse yes
 input "type:touchpad" {
     tap disabled 
     natural_scroll enabled
+    dwt false
 }
 
 input "type:keyboard" {
@@ -67,7 +68,7 @@ exec gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 exec mako
 exec swayidle -w timeout 150 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec wl-paste --watch cliphist store   # clipboard history
-exec wl-clip-persist --clipboard regular
+# exec wl-clip-persist --clipboard regular
 # exec paplay ~/.config/sway/startup.wav
 
 # --------
