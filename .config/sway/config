@@ -26,6 +26,8 @@ client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.unfocused        #222222 #222222 #888888 #292d2e   #222222
 
 for_window [floating] move position center
+for_window [window_type="dialog"] floating enable
+for_window [window_role="dialog"] floating enable
 
 popup_during_fullscreen smart
 focus_follows_mouse yes
@@ -54,6 +56,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 bindsym $mod+comma exec rofimoji --selector fuzzel --skin-tone neutral --prompt "> " --typer ydotool --action copy
 
+bindsym End exec ~/.config/sway/backlight.sh
+
 # Don't lock/blank while watching fullscreen video (mpv, browser fullscreen, etc)
 for_window [app_id="mpv"] inhibit_idle fullscreen
 for_window [class=".*"] inhibit_idle focus
@@ -66,7 +70,7 @@ exec /usr/bin/lxqt-policykit-agent
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 exec mako
-exec swayidle -w timeout 150 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+exec swayidle -w timeout 150 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 exec wl-paste --watch cliphist store   # clipboard history
 # exec wl-clip-persist --clipboard regular
 # exec paplay ~/.config/sway/startup.wav
