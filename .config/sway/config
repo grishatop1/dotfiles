@@ -17,6 +17,7 @@ output * max_render_time off
 
 assign [app_id="brave-browser"] 3
 assign [app_id="org.telegram.desktop.*"] 4
+assign [app_id="discord"] 4
 
 default_border pixel 1
 default_floating_border pixel 1
@@ -37,6 +38,7 @@ input "type:touchpad" {
     tap disabled 
     natural_scroll enabled
     dwt false
+    middle_emulation disabled
 }
 
 input "type:keyboard" {
@@ -134,8 +136,8 @@ bindsym $mod+Shift+Right move right
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# change container layout (stacked(stacking), tabbed, toggle split)
+bindsym $mod+s layout tabbed
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
