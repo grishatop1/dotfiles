@@ -7,7 +7,7 @@
 
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "disk", "backlight", "pulseaudio", "clock", "tray"],
+    "modules-right": ["network", "cpu", "memory", "disk", "backlight", "pulseaudio", "sway/language", "clock", "tray"],
     
     "sway/workspaces": {
         "disable-scroll": true,
@@ -85,6 +85,9 @@
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "scroll-step": 5.0,
         "smooth-scrolling-threshold": 2.0
+    },
+    "sway/language": {
+        "format": "\ueb01 {short}"
     },
     "clock": {
         "format": "{:%A %d %B %H:%M}",

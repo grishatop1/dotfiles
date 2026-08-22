@@ -11,9 +11,11 @@ exec_always hash dbus-update-activation-environment 2>/dev/null && \
 
 # --- grisha ------------------------------------------
 
+# tearing isn't supported on my laptop bruh
 
-output eDP-1 allow_tearing yes
-output * max_render_time off
+# output * allow_tearing yes
+# output * max_render_time off
+# for_window [app_id=".*"] allow_tearing yes
 
 assign [app_id="brave-browser"] 3
 assign [app_id="org.telegram.desktop.*"] 4
@@ -35,6 +37,7 @@ focus_follows_mouse yes
 
 
 input "type:touchpad" {
+    # events disabled
     tap disabled 
     natural_scroll enabled
     dwt false
@@ -42,7 +45,9 @@ input "type:touchpad" {
 }
 
 input "type:keyboard" {
-    xkb_layout us
+    xkb_layout "us,rs,ru"
+    xkb_variant ",yz,"
+    xkb_options "grp:alt_shift_toggle"
 }
 
 input "type:pointer" {

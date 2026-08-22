@@ -41,6 +41,7 @@ window#waybar {
 #disk,
 #backlight,
 #pulseaudio,
+#language,
 #clock {
     padding: 0 10px;
     background: transparent;
@@ -63,6 +64,15 @@ window#waybar {
 #memory.critical
 {
     color: @error; 
+}
+
+#language {
+    min-width: 36px;
+}
+#language.ru,
+#language.rs
+{
+    color: @error;
 }
 
 
