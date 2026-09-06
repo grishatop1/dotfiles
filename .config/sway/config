@@ -17,7 +17,7 @@ exec_always hash dbus-update-activation-environment 2>/dev/null && \
 # output * max_render_time off
 # for_window [app_id=".*"] allow_tearing yes
 
-assign [app_id="brave-browser"] 3
+assign [app_id="chromium"] 3
 assign [app_id="org.telegram.desktop.*"] 4
 assign [app_id="discord"] 4
 

@@ -83,6 +83,7 @@
             "headphone-muted": "\ueee8"
         }, 
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
         "scroll-step": 5.0,
         "smooth-scrolling-threshold": 2.0
     },
