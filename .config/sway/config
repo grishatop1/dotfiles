@@ -63,7 +63,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 bindsym $mod+comma exec rofimoji --selector fuzzel --skin-tone neutral --prompt "> " --typer ydotool --action copy
 
-bindsym End exec ~/.config/sway/backlight.sh
+#bindsym End exec ~/.config/sway/backlight.sh
 
 bindsym $mod+Tab focus next sibling
 bindsym $mod+Shift+Tab focus prev sibling
@@ -75,7 +75,7 @@ for_window [class=".*"] inhibit_idle focus
 
 # --- autostart -----------------------------------------------------
 exec wlsunset -l 43.814200 -L 18.569600 -t 2300   # replace with your coords; or use gammastep -l <lat>:<lon>
-exec udiskie
+# exec udiskie - i'll use Thunar's plugin
 exec /usr/bin/lxqt-policykit-agent
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
